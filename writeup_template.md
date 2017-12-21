@@ -197,7 +197,9 @@ I then recorded the vehicle recovering from the left side and right sides of the
 
 Then I repeated this process on track two in order to get more data points.
 
-To augment the data sat, I also flipped images and angles thinking that this would help gather more training data and help the model to train on both sides. For example, here is an image that has then been flipped:
+The top 70 pixels and the bottom 25 pixels of the image mostly capture useless infomations to the data, so I decided to crop thoese pixels to make the data more pure and more usefull.
+
+To augment the data set, I also flipped images and angles thinking that this would help gather more training data and help the model to train on both sides. For example, here is an image that has then been flipped:
 
 ![alt text][image6]
 ![alt text][image7]
@@ -206,4 +208,4 @@ After the collection process, I had X number of data points. I then preprocessed
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by the loss history visualize below. I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by the loss history visualize below, and the model run pretty well in autonomous mode. I used an adam optimizer so that manually training the learning rate wasn't necessary.
