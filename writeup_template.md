@@ -88,23 +88,31 @@ Non-trainable params: 0
 
 </pre>
 
-My model consists of a convolution neural network with 3x3 filter sizes and depths between 32 and 128 (model.py lines 18-24) 
+My model consists of 5 convolution neural network with the filter sizes rise from 24x24 to 64x64 and kernel size between 3 and 5, and with (2, 2) strides for the first three convolution neural network.
 
-The model includes RELU layers to introduce nonlinearity (code line 20), and the data is normalized in the model using a Keras lambda layer (code line 18). 
+The model includes RELU layers to introduce nonlinearity, and the data is normalized to [-0.5, 0.5] in the model using a Keras lambda layer. 
+
+The model includes a flatten layer.
+
+The model includes 4 fully connection layers and with dimensionality of the output space 100 -> 50 -> 10 -> 1.
 
 #### 2. Attempts to reduce overfitting in the model
 
-The model contains dropout layers in order to reduce overfitting (model.py lines 21). 
+The model contains dropout layers in order to reduce overfitting. 
 
-The model was trained and validated on different data sets to ensure that the model was not overfitting (code line 10-16). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+The model was trained and validated on different data sets to ensure that the model was not overfitting. 
+
+First I drive the car counter-clock-wise and clock-wise once, and then I trained the model and run the autonomouse mode and found that the car drive to a wrong way at a same spot, so I rerun the training mode, and drive the car to that weird spot and trained the model at that spot multiple times(3 times, clock-wise and counter clock-wise).
+
+The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
 #### 3. Model parameter tuning
 
-The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 25).
+The model used an adam optimizer, so the learning rate was not tuned manually.
 
 #### 4. Appropriate training data
 
-Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road ... 
+Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road by drive the car from a counter-clock-wise track and clock-wise track.
 
 For details about how I created the training data, see the next section. 
 
