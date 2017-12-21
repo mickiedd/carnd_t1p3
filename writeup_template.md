@@ -72,7 +72,7 @@ Non-trainable params: 0
 
 </pre>
 
-My model consists of 5 convolution neural network with the filter sizes rise from 24x24 to 64x64 and kernel size between 3 and 5, and with (2, 2) strides for the first three convolution neural network.
+My model consists of 5 convolution neural network with the filter sizes range from 24x24 to 64x64 and kernel size between 3 and 5, and with (2, 2) strides for the first three convolution neural network.
 
 The model includes RELU layers to introduce nonlinearity, and the data is normalized to [-0.5, 0.5] in the model using a Keras lambda layer. 
 
