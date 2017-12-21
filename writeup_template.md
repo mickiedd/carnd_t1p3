@@ -179,13 +179,13 @@ Here is a visualization of the architecture below:
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
-![alt text][image2]
+<img src='./oie_2jTSbgoBxnw5.png' />
 
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to steer back to the center. These images show the image captured by the center and the side camera:
 
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
+<img src='./center.jpg />
+<img src='./left.jpg />
+<img src='./right.jpg />
 
 Then I repeated this process on track two in order to get more data points.
 
@@ -193,8 +193,7 @@ The top 70 pixels and the bottom 25 pixels of the image mostly capture useless i
 
 To augment the data set, I also flipped images and angles thinking that this would help gather more training data and help the model to train on both sides. For example, here is an image that has then been flipped:
 
-![alt text][image6]
-![alt text][image7]
+<img src='./not_clip.jpg /> <img src='./clip.jpg />
 
 After the collection process, I had X number of data points. I then preprocessed this data by scale pixels between -0.5 and 0.5.
 
