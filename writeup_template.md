@@ -173,7 +173,7 @@ Non-trainable params: 0
 
 Here is a visualization of the architecture below:
 
-![alt text][image1]
+<img src='./cnn_achitecture.jpg' />
 
 #### 3. Creation of the Training Set & Training Process
 
