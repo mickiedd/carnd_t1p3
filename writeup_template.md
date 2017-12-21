@@ -1,11 +1,5 @@
 # **Behavioral Cloning** 
 
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
----
-
 **Behavioral Cloning Project**
 
 The goals / steps of this project are the following:
@@ -78,7 +72,7 @@ Non-trainable params: 0
 
 </pre>
 
-My model consists of 5 convolution neural network with the filter sizes rise from 24x24 to 64x64 and kernel size between 3 and 5, and with (2, 2) strides for the first three convolution neural network.
+My model consists of 5 convolution neural network with the filter sizes range from 24x24 to 64x64 and kernel size between 3 and 5, and with (2, 2) strides for the first three convolution neural network.
 
 The model includes RELU layers to introduce nonlinearity, and the data is normalized to [-0.5, 0.5] in the model using a Keras lambda layer. 
 
@@ -120,13 +114,13 @@ In order to gauge how well the model was working, I split my image and steering 
 
 To combat the overfitting, I modified the model so that the mean squared error on the validation set maybe low.
 
-So I try a more powerful net work architecture, the LeNet.
+So I try a more powerful network architecture, the LeNet.
 
 It seems that the loss decrease pretty well, but not good enough.
 
-Then I try to a much more ppowerful network architecture, the architecture pubilshed by the autonomous vehicl team at NVIDIA.The model contained a much more deeper layers than the previous model.And then I train the data with this model, because this network is much more powerful, i only need to train one epoch, and I get a pretty nice loss.
+Then I try to a much more powerful network architecture, the architecture pubilshed by the autonomous vehicle team at NVIDIA.The model contained a much more deeper layers than the previous model.And then I train the data with this model, because this network is much more powerful, i only need to train one epoch, and I get a pretty nice loss.
 
-The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track just like the image show below, to improve the driving behavior in these cases, I decide to get more data from this spots, that 3 times clock-wise and counter-clock-wise.
+The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track just like the image show below, to improve the driving behavior in these cases, I decide to get more data from this spots, that is gather more data by running 3 times clock-wise and counter-clock-wise arround the track.
 
 <img src='./oie_2jTSbgoBxnw5.png' />
 
@@ -173,7 +167,7 @@ Non-trainable params: 0
 
 Here is a visualization of the architecture below:
 
-![alt text][image1]
+<img src='./cnn_architecture.jpg' />
 
 #### 3. Creation of the Training Set & Training Process
 
@@ -199,6 +193,6 @@ After the collection process, I had 12272 number of train data points and 768 nu
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 3 as evidenced by the loss history visualize below, and the model run pretty well in autonomous mode. I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data to train the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 3 as evidenced by the loss history visualized below, and the model run pretty well in autonomous mode. I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
 <img src='./index.png' />
