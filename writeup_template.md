@@ -118,7 +118,7 @@ So I try a more powerful network architecture, the LeNet.
 
 It seems that the loss decrease pretty well, but not good enough.
 
-Then I try to a much more powerful network architecture, the architecture pubilshed by the autonomous vehicl team at NVIDIA.The model contained a much more deeper layers than the previous model.And then I train the data with this model, because this network is much more powerful, i only need to train one epoch, and I get a pretty nice loss.
+Then I try to a much more powerful network architecture, the architecture pubilshed by the autonomous vehicle team at NVIDIA.The model contained a much more deeper layers than the previous model.And then I train the data with this model, because this network is much more powerful, i only need to train one epoch, and I get a pretty nice loss.
 
 The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track just like the image show below, to improve the driving behavior in these cases, I decide to get more data from this spots, that 3 times clock-wise and counter-clock-wise.
 
