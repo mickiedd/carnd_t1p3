@@ -202,7 +202,7 @@ To augment the data sat, I also flipped images and angles thinking that this wou
 ![alt text][image6]
 ![alt text][image7]
 
-After the collection process, I had X number of data points. I then preprocessed this data by scale pixels between -1 and 1.
+After the collection process, I had X number of data points. I then preprocessed this data by scale pixels between -0.5 and 0.5.
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
