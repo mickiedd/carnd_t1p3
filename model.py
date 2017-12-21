@@ -81,7 +81,7 @@ SVG(model_to_dot(model).create(prog='dot', format='svg'))
 
 HTML("""
 <video width="320" height="160" controls>
-  <source src="run1.mp4">
+  <source src="video.mp4">
 </video>
 """)
 
