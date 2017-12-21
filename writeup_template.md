@@ -195,7 +195,7 @@ To augment the data set, I also flipped images and angles thinking that this wou
 
 <img src='./not_clip.jpg' /> <img src='./clip.jpg' />
 
-After the collection process, I had X number of data points. I then preprocessed this data by scale pixels between -0.5 and 0.5.
+After the collection process, I had 12272 number of train data points and 768 number of validation data points. I then preprocessed this data by scale pixels between -0.5 and 0.5.
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
