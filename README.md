@@ -63,3 +63,31 @@ Non-trainable params: 0
 Here is a visualization of the architecture below:
 
 <img src='./cnn_architecture.jpg' />
+
+#### 3. Creation of the Training Set & Training Process
+
+To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+
+<img src='./oie_2jTSbgoBxnw5.png' />
+
+I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to steer back to the center. These images show the image captured by the center and the side camera:
+
+<img src='./center.jpg' />
+<img src='./left.jpg' />
+<img src='./right.jpg' />
+
+Then I repeated this process on track two in order to get more data points.
+
+The top 70 pixels and the bottom 25 pixels of the image mostly capture useless infomations to the data, so I decided to crop thoese pixels to make the data more pure and more usefull.
+
+To augment the data set, I also flipped images and angles thinking that this would help gather more training data and help the model to train on both sides. For example, here is an image that has then been flipped:
+
+<img src='./not_clip.jpg' /> <img src='./clip.jpg' />
+
+After the collection process, I had 12272 number of train data points and 768 number of validation data points. I then preprocessed this data by scale pixels between -0.5 and 0.5.
+
+I finally randomly shuffled the data set and put 20% of the data into a validation set. 
+
+I used this training data to train the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 3 as evidenced by the loss history visualized below, and the model run pretty well in autonomous mode. I used an adam optimizer so that manually training the learning rate wasn't necessary.
+
+<img src='./index.png' />
