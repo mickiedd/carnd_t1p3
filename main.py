@@ -26,8 +26,11 @@ def car_net():
     model_.add(Conv2D(filters=64, kernel_size=3, activation='relu'))
     model_.add(Flatten())
     model_.add(Dense(100))
+    model_.add(Dropout(0.5))
     model_.add(Dense(50))
+    model_.add(Dropout(0.5))
     model_.add(Dense(10))
+    model_.add(Dropout(0.5))
     model_.add(Dense(1))
     return model_
 
