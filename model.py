@@ -75,16 +75,5 @@ print('Validation Images:', len(validation_samples))
 
 plot_loss_and_accuracy(h.history)
 
-
-SVG(model_to_dot(model).create(prog='dot', format='svg'))
-
-
-HTML("""
-<video width="320" height="160" controls>
-  <source src="video.mp4">
-</video>
-""")
-
-
 model.save('model.h5')
 
