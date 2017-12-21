@@ -128,6 +128,8 @@ Then I try to a much more ppowerful network architecture, the architecture pubil
 
 The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track just like the image show below, to improve the driving behavior in these cases, I decide to get more data from this spots, that 3 times clock-wise and counter-clock-wise.
 
+<img src='./oie_2jTSbgoBxnw5.png' />
+
 At the end of the process, the vehicle is able to drive autonomously around the track one without leaving the road.
 
 #### 2. Final Model Architecture
